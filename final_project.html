@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>badminton</title>
+		<link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
+		<script>
+
+			function pass()
+			{
+			var word=document.getElementById("name").value;
+			if(word.length==0)
+				document.getElementById("code").innerHTML="Enter name";
+			else
+				document.getElementById("code").innerHTML="";
+			}
+			function phonen()
+			{
+			var word1=document.getElementById("phone").value;
+			if(word1.length<12 || word1.length>12)
+				document.getElementById("ph").innerHTML="Enter correct phone number";
+				else
+				document.getElementById("ph").innerHTML="";
+			}
+			function submit()
+			{
+			alert('Form Submitted');
+			}
+
+</script>
+    </head>
+    <body class="bod" >
+        <h1 class="head"><i>Badminton Coaching Center</i></h2><br>
+        <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Badminton-1428046.jpg/1200px-Badminton-1428046.jpg" height="240px" width="480px" alt="Smiley face"><br><br></center>
+        
+        <p id="paragraph"><center><i>Welcome to Badminton Coaching Login Page</i><br>
+		The form serves as a medium for the coaching center to get registerations online and work efficiently. I have chosen this type of form as it requires different types of data 
+		inputs and is flexible. </center></p>
+		<br>
+		<br>
+		<form class="form">
+		<center> Registeration Form <br><br></center>
+
+		First Name:<br>
+		<input type="text" name="Name" onblur="pass();" id="name"required><span id="code"></span> <br>
+		<br>
+
+		Last Name:<br>
+		<input type="text" name="Name" required> <br>
+		<br>
+
+		Date of Birth:<br>
+		<input type="date"><br>
+		<br>
+
+		E-mail ID:<br>
+		<input type="text" name="mailid" required> <br>
+		<br>
+		
+		Address:<br>
+		<input type="text" name="address" required> <br>
+		<br>
+		
+		Contact Number:<br>
+		<input type="text" name="contact" placeholder="xxx-xxx-xxxx" onblur="phonen();" id="phone"><span id="ph"></span> <br>
+		<br>
+
+		Batch Timing:<br>
+		<input type="radio" name="time" > 6:00am <br>
+		<input type="radio" name="time" > 10:00am <br>
+		<input type="radio" name="time" > 4:00pm <br>
+		<input type="radio" name="time" > 8:00pm <br>
+		<br>
+		<span id="click" onclick="submit();">Submit form</span>
+    </form>
+    </body>
+</html>
